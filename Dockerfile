@@ -5,5 +5,6 @@ RUN curl -L https://github.com/jagrosh/MusicBot/releases/download/${VERSION}/JMu
 FROM gcr.io/distroless/java:11
 LABEL version=${VERSION}
 COPY --from=download /JMusicBot.jar /
-ENTRYPOINT ["java", "-jar", "-Dnogui=true"]
+ENV CONFIG=config.txt
+ENTRYPOINT ["java", "-jar", "-Dnogui=true", "-Dconfig=${CONFIG}"]
 CMD ["JMusicBot.jar"]
