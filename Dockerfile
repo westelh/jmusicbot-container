@@ -6,4 +6,5 @@ FROM gcr.io/distroless/java:11
 LABEL version=${VERSION}
 COPY --from=download /JMusicBot.jar /
 ENV CONFIG=config.txt
-ENTRYPOINT ["java", "-jar", "-Dnogui=true", "JMusicBot.jar"]
+ENTRYPOINT ["java"]
+CMD ["-Dnogui=true", "-jar", "JMusicBot.jar"]
