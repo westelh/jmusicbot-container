@@ -1,8 +1,9 @@
-FROM centos:centos7 as download
+FROM ubuntu:focal as download
 ARG VERSION
-RUN curl -L https://github.com/jagrosh/MusicBot/releases/download/${VERSION}/JMusicBot-${VERSION}.jar -o JMusicBot.jar
+RUN apt-get update && apt-get install -y wget
+RUN wget --no-check-certificate -O JMusicBot.jar  https://github.com/jagrosh/MusicBot/releases/download/${VERSION}/JMusicBot-${VERSION}.jar
 
-FROM gcr.io/distroless/java:11
+FROM eclipse-temurin:17-focal
 LABEL version=${VERSION}
 COPY --from=download /JMusicBot.jar /
 ENV CONFIG=config.txt
