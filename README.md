@@ -27,7 +27,7 @@ docker buildx build --platform linux/amd64,linux/arm/v7,linux/arm64/v8 --build-a
 
  
 
-## Usage
+## Run
 
 Application in the container reads config file from /config.txt. There are some ways to pass configurations created on host machine.
 
