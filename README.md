@@ -10,7 +10,7 @@ Available on [DokerHub](https://hub.docker.com/repository/docker/westelh/jmusicb
 ### Simple build
 
 ``` bash
-docker build -t my/image:latest --build-arg VERSION=0.3.5 .
+docker build -t my/image:latest --build-arg VERSION=x.x.x .
 ```
 
 Dockerfile gets "VERSION" as a build-time argument to choose which version to download from [jagrosh/Musicbot](https://github.com/jagrosh/MusicBot).
