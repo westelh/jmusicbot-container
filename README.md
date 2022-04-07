@@ -3,28 +3,6 @@ Container for runnning [jagrosh/Musicbot](https://github.com/jagrosh/MusicBot)
 
 Available on [DokerHub](https://hub.docker.com/repository/docker/westelh/jmusicbot)
 
-## Build🛠️
-
-### Simple build
-
-``` bash
-docker build -t my/image:latest --build-arg VERSION=x.x.x .
-```
-
-Dockerfile gets "VERSION" as a build-time argument to choose which version to download from [jagrosh/Musicbot](https://github.com/jagrosh/MusicBot).
-
-
-
-### Multi architecture build
-
-Multi architecture build using buildx command is [supported on Docker Desktop](https://docs.docker.com/desktop/multi-arch/).
-
-```bash
-docker buildx build --platform linux/amd64,linux/arm/v7,linux/arm64/v8 --build-arg VERSION=x.x.x -t my/image:latest .
-```
-
- 
-
 ## Run🎧
 Follow the [official guide](https://jmusicbot.com/setup/) to make your config file.
 Application in the container reads config file from /config.txt. There are some ways to pass configurations created on the host machine.
