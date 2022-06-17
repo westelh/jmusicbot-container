@@ -58,7 +58,7 @@ Dockerfile gets "VERSION" as a build-time argument to choose which version to do
 
 ### Multi architecture build
 
-Multi architecture build using buildx command is [supported on Docker Desktop](https://docs.docker.com/desktop/multi-arch/).
+[Multi architecture build using buildx](https://docs.docker.com/desktop/multi-arch/) command is supported on Docker Desktop.
 
 ```bash
 docker buildx build --platform linux/amd64,linux/arm/v7,linux/arm64/v8 --build-arg VERSION=x.x.x -t my/image:latest .
