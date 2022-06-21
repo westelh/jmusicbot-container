@@ -12,6 +12,7 @@ Application in the container reads config file from /config.txt.
 
 ### Example
 Replace "your.cfg" with your config file.
+
 `docker run -it -v "$(pwd)"/your.cfg:/config.txt westelh/jmusicbot:latest`
 
 ### Options
