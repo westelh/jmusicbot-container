@@ -20,10 +20,22 @@ version: "0.3.8"
 }
 
 dagger.#Plan & {
-    client: filesystem: ".": read: contents: dagger.#FS
+    client: {
+        filesystem: ".": read: contents: dagger.#FS
+        env: DOCKERHUB_TOKEN: dagger.#Secret
+    }
     actions: {
         build: #Build & {
             source: client.filesystem.".".read.contents
+        }
+
+        push: docker.#Push & {
+            dest: "westelh/jmusicbot:latest"
+            auth: {
+                username: "westelh"
+                secret: client.env.DOCKERHUB_TOKEN
+            }
+            image: build.output
         }
     }
 }
