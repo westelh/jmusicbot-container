@@ -29,12 +29,12 @@ version: "0.3.8"
 
 dagger.#Plan & {
     client: {
-        filesystem: ".": read: contents: dagger.#FS
+        filesystem: "./eclipse-temurin": read: contents: dagger.#FS
         env: DOCKERHUB_TOKEN: dagger.#Secret
     }
     actions: {
         build: #Build & {
-            source: client.filesystem.".".read.contents
+            source: client.filesystem."./eclipse-temurin".read.contents
             platforms: [
                 "linux/amd64", 
             ]
