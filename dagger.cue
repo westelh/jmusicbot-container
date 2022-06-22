@@ -14,9 +14,17 @@ version: "0.3.8"
 }
 
 #Build: docker.#Dockerfile & {
-    buildArg: {
-        VERSION: version
+    source: dagger.#FS
+    platforms: [...string]
+
+    _download: #DownloadRelease
+
+    _build: docker.#Dockerfile & {
+        "source": source
+        "platforms": platforms
     }
+
+    output: _build.output
 }
 
 dagger.#Plan & {
@@ -27,6 +35,9 @@ dagger.#Plan & {
     actions: {
         build: #Build & {
             source: client.filesystem.".".read.contents
+            platforms: [
+                "linux/amd64", 
+            ]
         }
 
         push: docker.#Push & {
