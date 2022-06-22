@@ -13,16 +13,9 @@ version: "0.3.8"
     dest: "./JMusicBot.jar"
 }
 
-#Build: {
-    src: dagger.#FS
-    image: _build.output
-
-    _src: #DownloadRelease
-    _build: docker.#Dockerfile & {
-        source: src
-        buildArg: {
-            VERSION: version
-        }
+#Build: docker.#Dockerfile & {
+    buildArg: {
+        VERSION: version
     }
 }
 
@@ -30,7 +23,7 @@ dagger.#Plan & {
     client: filesystem: ".": read: contents: dagger.#FS
     actions: {
         build: #Build & {
-            src: client.filesystem.".".read.contents
+            source: client.filesystem.".".read.contents
         }
     }
 }
