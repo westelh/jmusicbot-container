@@ -6,8 +6,6 @@ import(
     "westelh.github.io/jmusicbot/common"
 )
 
-version: "0.3.8"
-
 dagger.#Plan & {
     client: {
         filesystem: "./eclipse-temurin": read: contents: dagger.#FS
