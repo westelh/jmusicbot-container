@@ -1,1 +1,1 @@
-module: ""
+module: "westelh.github.io/jmusicbot"
