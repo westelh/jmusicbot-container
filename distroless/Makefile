@@ -6,16 +6,16 @@ JMusicBot.jar:
 
 .PHONY: build
 build: JMusicBot.jar
-	docker build -t westelh/jmusicbot:$(VERSION) -t westelh/jmusicbot:latest .
+	docker build -t westelh/jmusicbot:distroless-$(VERSION) -t westelh/jmusicbot:distroless-latest .
 
 .PHONY: push
 push: build
-	docker push westelh/jmusicbot:$(VERSION) 
-	docker push westelh/jmusicbot:latest
+	docker push westelh/jmusicbot:distroless-$(VERSION) 
+	docker push westelh/jmusicbot:distroless-latest
 
 .PHONY: multi
 multi: JMusicBot.jar
-	docker buildx build --platform $(PLATFORMS) -t westelh/jmusicbot:$(VERSION) -t westelh/jmusicbot:latest --push .
+	docker buildx build --platform $(PLATFORMS) -t westelh/jmusicbot:distroless-$(VERSION) -t westelh/jmusicbot:distroless-latest --push .
 
 .PHONY: clean
 clean:
