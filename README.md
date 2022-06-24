@@ -4,6 +4,8 @@
 
 Multi architecture container for runnning [jagrosh/Musicbot](https://github.com/jagrosh/MusicBot)
 
+Supports Raspberry Pi and Windows!
+
 Available on [DokerHub](https://hub.docker.com/repository/docker/westelh/jmusicbot)
 
 ## Run🎧
