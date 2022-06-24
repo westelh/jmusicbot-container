@@ -2,7 +2,7 @@
 ![pulls](https://img.shields.io/docker/pulls/westelh/jmusicbot)
 
 
-Container for runnning [jagrosh/Musicbot](https://github.com/jagrosh/MusicBot)
+Multi architecture container for runnning [jagrosh/Musicbot](https://github.com/jagrosh/MusicBot)
 
 Available on [DokerHub](https://hub.docker.com/repository/docker/westelh/jmusicbot)
 
