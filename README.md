@@ -8,9 +8,14 @@ Supports Raspberry Pi and Windows!
 
 Available on [DokerHub](https://hub.docker.com/repository/docker/westelh/jmusicbot)
 
-## Run🎧
+## Run
+You need a config file for the bot🤖
+
+
 Follow the [official guide](https://jmusicbot.com/setup/) to make your config file.
-Application in the container reads config file from /config.txt.
+
+
+**Application in the container reads config file from /config.txt.**
 
 ### Example
 Replace "your.cfg" with your config file.
