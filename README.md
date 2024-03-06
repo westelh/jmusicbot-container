@@ -10,11 +10,10 @@ Supports Raspberry Pi and Windows!
 
 ## Run
 You need a config file for the bot 📑
-
-If you haven't created one yet, follow the [official guide](https://jmusicbot.com/setup/) to make your config file.
+First, follow the [official guide](https://jmusicbot.com/setup/) to make your config file.
 
 ### Example
-Replace "your.cfg" with your config file. **Application in the container reads config file from /config.txt.**
+Replace "$(pwd)/your.cfg" with the path to your config file. **Application in the container reads config file from /config.txt.**
 
 `docker run -it -v "$(pwd)"/your.cfg:/config.txt westelh/jmusicbot:latest`
 
