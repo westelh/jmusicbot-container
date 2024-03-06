@@ -10,6 +10,7 @@ Supports Raspberry Pi and Windows!
 
 ## Run
 You need a config file for the bot 📑
+
 First, follow the [official guide](https://jmusicbot.com/setup/) to make your config file.
 
 ### Example
